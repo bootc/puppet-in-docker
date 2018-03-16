@@ -23,7 +23,7 @@ RUN pip install puppetboard=="$PUPPET_BOARD_VERSION" gunicorn=="$GUNICORN_VERSIO
 
 COPY wsgi.py settings.py /var/www/puppetboard/
 
-EXPOSE $PUPPETBOARD_PORT
+EXPOSE 8000
 
 WORKDIR /var/www/puppetboard
 
