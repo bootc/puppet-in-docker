@@ -1,6 +1,6 @@
-FROM bootc/puppetserver-standalone:5.1.3
+FROM bootc/puppetserver-standalone:5.2.0
 
-ENV PUPPETDB_TERMINUS_VERSION="5.1.1"
+ENV PUPPETDB_TERMINUS_VERSION="5.2.0"
 
 LABEL org.label-schema.vendor="Chris Boot" \
       org.label-schema.url="https://github.com/bootc/puppet-in-docker" \
@@ -14,7 +14,7 @@ LABEL org.label-schema.vendor="Chris Boot" \
       com.puppet.dockerfile="/Dockerfile"
 
 RUN apt-get update && \
-    apt-get install --no-install-recommends -y puppetdb-termini="$PUPPETDB_TERMINUS_VERSION"-1puppetlabs1 && \
+    apt-get install --no-install-recommends -y puppetdb-termini="$PUPPETDB_TERMINUS_VERSION"-1"$UBUNTU_CODENAME" && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
