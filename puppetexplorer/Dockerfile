@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM alpine:3.6
 
 ENV PUPPET_EXPLORER_VERSION="2.0.0"
 
