@@ -185,6 +185,6 @@ To add additional images to the repository, create a folder in the root of the r
 
 ## Maintainers
 
-This repository is maintained by: Gareth Rushgrove <gareth@puppet.com>.
+This repository is maintained by: Chris Boot <bootc@bootc.net> based on work by Gareth Rushgrove <gareth@puppet.com>.
 
 Individual images may have separate maintainers as mentioned in the relevant Dockerfiles.

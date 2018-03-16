@@ -13,7 +13,7 @@ require_relative 'lib/tableprint/formatters'
 
 include Puppet::Dockerfile
 
-REPOSITORY = ENV['DOCKER_REPOSITORY'] || 'puppet'
+REPOSITORY = ENV['DOCKER_REPOSITORY'] || 'bootc'
 NO_CACHE = ENV['DOCKER_NO_CACHE'] || false
 TAG = ENV['DOCKER_IMAGE_TAG'] || 'latest'
 NAMESPACE = ENV['DOCKER_NAMESPACE'] || 'org.label-schema'
