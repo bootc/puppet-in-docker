@@ -1,6 +1,6 @@
-FROM alpine:3.4
+FROM alpine:3.6
 
-ENV PUPPET_BOARD_VERSION="0.2.2" \
+ENV PUPPET_BOARD_VERSION="0.3.0" \
     GUNICORN_VERSION="19.7.1" \
     PUPPETBOARD_PORT="8000"
 
@@ -15,7 +15,8 @@ LABEL org.label-schema.vendor="Chris Boot" \
       org.label-schema.schema-version="1.0" \
       com.puppet.dockerfile="/Dockerfile"
 
-RUN apk add --no-cache --update curl py-pip && \
+RUN apk add --no-cache --update curl python3 && \
+    ln -s pip3 /usr/bin/pip && \
     rm -rf /var/cache/apk/*
 
 RUN pip install puppetboard=="$PUPPET_BOARD_VERSION" gunicorn=="$GUNICORN_VERSION"

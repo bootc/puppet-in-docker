@@ -15,7 +15,7 @@ describe 'Dockerfile' do
     its(:exit_status) { is_expected.to eq 0 }
   end
 
-  describe package('py-pip') do
+  describe package('python3') do
     it { is_expected.to be_installed }
   end
 
