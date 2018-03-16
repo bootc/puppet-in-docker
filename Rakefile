@@ -55,7 +55,7 @@ task :list do
       from: get_from_from_dockerfile(name),
       sha: sha,
       build: get_build_date_from_label(name),
-      maintainer: get_maintainer_from_dockerfile(name)
+      vendor: get_vendor_from_label(name)
     }.each_with_object({}) do |(k, v), h|
       h[k] = highlight_issues(v)
       h
