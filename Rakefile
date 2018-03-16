@@ -13,7 +13,7 @@ require_relative 'lib/tableprint/formatters'
 
 include Puppet::Dockerfile # rubocop:disable Style/MixinUsage
 
-REPOSITORY = ENV['DOCKER_REPOSITORY'] || 'bootc'
+REPOSITORY = ENV['DOCKER_REPOSITORY'] || 'quay.io/bootc'
 NO_CACHE = ENV['DOCKER_NO_CACHE'] || false
 TAG = ENV['DOCKER_IMAGE_TAG'] || 'latest'
 NAMESPACE = ENV['DOCKER_NAMESPACE'] || 'org.label-schema'

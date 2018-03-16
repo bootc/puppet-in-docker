@@ -1,4 +1,4 @@
-FROM bootc/puppetserver-standalone:5.2.0
+FROM quay.io/bootc/puppetserver-standalone:5.2.0
 
 ENV PUPPETDB_TERMINUS_VERSION="5.2.0"
 

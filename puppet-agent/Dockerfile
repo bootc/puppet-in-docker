@@ -1,4 +1,4 @@
-FROM bootc/puppet-agent-ubuntu:5.4.0
+FROM quay.io/bootc/puppet-agent-ubuntu:5.4.0
 
 LABEL org.label-schema.vendor="Chris Boot" \
       org.label-schema.url="https://github.com/bootc/puppet-in-docker" \
