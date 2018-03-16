@@ -1,6 +1,6 @@
-FROM debian:8
+FROM debian:9
 
-ENV PUPPET_AGENT_VERSION="5.3.2" DEBIAN_CODENAME="jessie"
+ENV PUPPET_AGENT_VERSION="5.3.2" DEBIAN_CODENAME="stretch"
 
 LABEL org.label-schema.vendor="Chris Boot" \
       org.label-schema.url="https://github.com/bootc/puppet-in-docker" \
