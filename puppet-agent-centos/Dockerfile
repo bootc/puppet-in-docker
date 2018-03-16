@@ -1,6 +1,6 @@
 FROM centos:7
 
-ENV PUPPET_AGENT_VERSION="5.3.2"
+ENV PUPPET_AGENT_VERSION="5.4.0"
 
 LABEL org.label-schema.vendor="Chris Boot" \
       org.label-schema.url="https://github.com/bootc/puppet-in-docker" \
