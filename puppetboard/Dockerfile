@@ -11,8 +11,8 @@ LABEL org.label-schema.vendor="Chris Boot" \
       org.label-schema.license="Apache-2.0" \
       org.label-schema.version=$PUPPET_BOARD_VERSION \
       org.label-schema.vcs-url="https://github.com/bootc/puppet-in-docker" \
-      org.label-schema.vcs-ref="3146a521a42471713cf50426097399cc8a27d0a7" \
-      org.label-schema.build-date="2018-03-16T23:16:43Z" \
+      org.label-schema.vcs-ref="96c93246299b2dc6f192e335eb5eba65defc8bb7" \
+      org.label-schema.build-date="2018-04-04T08:38:31Z" \
       org.label-schema.schema-version="1.0" \
       com.puppet.dockerfile="/Dockerfile"
 
