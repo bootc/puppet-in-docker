@@ -1,6 +1,6 @@
-FROM quay.io/bootc/puppetserver-standalone:5.2.0
+FROM quay.io/bootc/puppetserver-standalone:5.3.0
 
-ENV PUPPETDB_TERMINUS_VERSION="5.2.0"
+ENV PUPPETDB_TERMINUS_VERSION="5.2.1"
 
 LABEL org.label-schema.vendor="Chris Boot" \
       org.label-schema.url="https://github.com/bootc/puppet-in-docker" \

@@ -1,6 +1,6 @@
 FROM alpine:3.6
 
-ENV PUPPET_VERSION="5.4.0" FACTER_VERSION="2.5.1"
+ENV PUPPET_VERSION="5.5.0" FACTER_VERSION="2.5.1"
 
 LABEL org.label-schema.vendor="Chris Boot" \
       org.label-schema.url="https://github.com/bootc/puppet-in-docker" \
