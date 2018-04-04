@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM alpine:3.7
 
 ENV PUPPET_BOARD_VERSION="0.3.0" \
     GUNICORN_VERSION="19.7.1" \
@@ -16,6 +16,7 @@ LABEL org.label-schema.vendor="Chris Boot" \
       org.label-schema.schema-version="1.0" \
       com.puppet.dockerfile="/Dockerfile"
 
+# pip symlink is required for serverspec tests
 RUN apk add --no-cache --update curl python3 && \
     ln -s pip3 /usr/bin/pip && \
     rm -rf /var/cache/apk/*

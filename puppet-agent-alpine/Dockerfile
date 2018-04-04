@@ -1,4 +1,4 @@
-FROM alpine:3.6
+FROM alpine:3.7
 
 ENV PUPPET_VERSION="5.5.0" FACTER_VERSION="2.5.1"
 
@@ -19,9 +19,7 @@ RUN apk add --update \
       ruby \
       ruby-irb \
       ruby-rdoc \
-      && \
-    echo http://dl-4.alpinelinux.org/alpine/edge/community/ >> /etc/apk/repositories && \
-    apk add --update shadow && \
+      shadow && \
     rm -rf /var/cache/apk/* && \
     gem install puppet:"$PUPPET_VERSION" facter:"$FACTER_VERSION" && \
     /usr/bin/puppet module install puppetlabs-apk
