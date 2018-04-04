@@ -69,7 +69,7 @@ module Puppet # :nodoc:
     def get_value_from_base_image(image, value)
       base_image = get_value_from_dockerfile(image, 'from')
       base_image_without_version = base_image.split(':')[0]
-      base_image_without_repo = base_image_without_version.split('/')[1]
+      base_image_without_repo = base_image_without_version.split('/')[-1]
       get_value_from_env(base_image_without_repo, value)
     end
 
