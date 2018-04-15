@@ -2,6 +2,10 @@
 
 A series of Dockerfiles, and the associated build toolchain, for building Docker images containing Puppet and related software.
 
+## Unofficial
+
+I (Chris Boot) have forked Puppet's own Puppet-in-Docker repository and am updating the images for my own use. This is not an official effort, but I am activately using many of these images.
+
 ## Experimental
 
 This approach to packaging Puppet software is experimental. The resulting images are not a supported way of running Puppet or Puppet Enterprise and are likely to change quickly based on feedback from users. Please do try them out and let us know what you think.
@@ -83,23 +87,6 @@ The same approach works with the Facter image as well.
 ```
 docker run --privileged -v /tmp:/tmp --net host -v /etc:/etc -v /var:/var -v /usr:/usr -v lib64:/lib64 puppet/facter os
 ```
-
-### API
-
-The resulting images expose a label-based API for gathering information about the image or for use in further automation. For example:
-
-```
-$ docker inspect -f "{{json .Config.Labels }}" puppet/puppet-agent-ubuntu | jq
-{
-  "com.puppet.build-time": "2016-05-09T12:14:22Z",
-  "com.puppet.dockerfile": "/Dockerfile",
-  "com.puppet.git.repo": "https://github.com/puppetlabs/dockerfiles",
-  "com.puppet.git.sha": "33f00f35d7275a6ca2a538650b9530734aa66929",
-  "com.puppet.version": "1.4.1"
-}
-```
-
-Please suggest other standard fields for inclusion in the API. Over time, a formal specification may be created, along with further tooling, but this is an experimental feature.
 
 ## Toolchain
 
