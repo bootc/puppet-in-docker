@@ -28,7 +28,6 @@ You can find published versions of these images on [quay.io](https://quay.io/use
 * [![Docker Repository on Quay](https://quay.io/repository/bootc/puppetboard/status "Docker Repository on Quay")](https://quay.io/repository/bootc/puppetboard): `quay.io/bootc/puppetboard`
 * [![Docker Repository on Quay](https://quay.io/repository/bootc/puppetdb/status "Docker Repository on Quay")](https://quay.io/repository/bootc/puppetdb): `quay.io/bootc/puppetdb`
 * [![Docker Repository on Quay](https://quay.io/repository/bootc/puppetdb-postgres/status "Docker Repository on Quay")](https://quay.io/repository/bootc/puppetdb-postgres): `quay.io/bootc/puppetdb-postgres`
-* [![Docker Repository on Quay](https://quay.io/repository/bootc/puppetexplorer/status "Docker Repository on Quay")](https://quay.io/repository/bootc/puppetexplorer): `quay.io/bootc/puppetexplorer`
 * [![Docker Repository on Quay](https://quay.io/repository/bootc/puppetserver/status "Docker Repository on Quay")](https://quay.io/repository/bootc/puppetserver): `quay.io/bootc/puppetserver`
 * [![Docker Repository on Quay](https://quay.io/repository/bootc/puppetserver-standalone/status "Docker Repository on Quay")](https://quay.io/repository/bootc/puppetserver-standalone): `quay.io/bootc/puppetserver-standalone`
 * [![Docker Repository on Quay](https://quay.io/repository/bootc/r10k/status "Docker Repository on Quay")](https://quay.io/repository/bootc/r10k): `quay.io/bootc/r10k`
@@ -106,7 +105,6 @@ puppet-agent-ubuntu     | 1.5.0   | ubuntu:16.04                         | 97475
 puppetboard             | 0.1.3   | alpine:3.3                           | 97475979ffe252d33a9df67524b5aa313022cb05 | 2016-05-20T10:01:19Z | Gareth Rushgrove "gareth@puppet.com"
 puppetdb                | 4.1.0   | ubuntu:16.04                         | 97475979ffe252d33a9df67524b5aa313022cb05 | 2016-05-20T10:01:19Z | Gareth Rushgrove "gareth@puppet.com"
 puppetdb-postgres       | 0.1.0   | postgres:9.5.2                       | 97475979ffe252d33a9df67524b5aa313022cb05 | 2016-05-20T10:01:19Z | Gareth Rushgrove "gareth@puppet.com"
-puppetexplorer          | 2.0.0   | alpine:3.3                           | 97475979ffe252d33a9df67524b5aa313022cb05 | 2016-05-20T10:01:19Z | Gareth Rushgrove "gareth@puppet.com"
 puppetserver            | 2.3.2   | puppet/puppetserver-standalone:2.4.0 | 161bca4fed59997fd19581df38678caeefe813bc | 2016-05-16T08:05:27Z | Gareth Rushgrove "gareth@puppet.com"
 puppetserver-standalone | 2.4.0   | ubuntu:16.04                         | 97475979ffe252d33a9df67524b5aa313022cb05 | 2016-05-20T10:01:19Z | Gareth Rushgrove "gareth@puppet.com"
 ```
