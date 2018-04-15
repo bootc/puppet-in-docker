@@ -136,7 +136,7 @@ task :update_base_images do
   end
 end
 
-%i[test lint publish rev pull].each do |task_name|
+%i[test lint publish rev push pull].each do |task_name|
   desc "Run #{task_name} for all images in repository in parallel"
   multitask task_name => IMAGES.collect { |image| "#{image}:#{task_name}" }
 end
