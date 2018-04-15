@@ -21,23 +21,6 @@ NAMESPACE = ENV['DOCKER_NAMESPACE'] || 'org.label-schema'
 unsorted_images = Dir.glob('*').select { |f| File.directory?(f) && File.exist?("#{f}/Dockerfile") && !File.exist?("#{f}/.ignore") }
 IMAGES = unsorted_images.sort_by { |e| [['puppet-agent-ubuntu', 'puppetserver-standalone'].include?(e) ? 0 : 1, e] }
 
-MICROBADGER_TOKENS = {
-  'puppet-agent'            => 'n4wMgsk5mHUoJM1IpygaYiDeTwc=',
-  'puppet-agent-alpine'     => 'Q0FbCSv_eOLoUkAA20dCGSCsxFU=',
-  'puppet-agent-centos'     => 'x1NxmFkzHLvhYpR25s4g0pN_M9c=',
-  'puppet-agent-debian'     => 'vqtjj3MKBeZXi2W4vFwQcZmseJc=',
-  'puppet-agent-ubuntu'     => '0UWrSJA_m7mYXTyW3tm9yhWcEzM=',
-  'facter'                  => 'xa-Yc1xoqs_b_QCaIq55gj-bme4=',
-  'puppetdb'                => 'z76OPnge96LMvIELFWknSYJbs24=',
-  'puppetdb-postgres'       => 'eo8WFlTPNL1IdbiGiDjb7yntZUw=',
-  'puppetserver-standalone' => 'XpINInOKHSl0ce5dBthyqs_vnxw=',
-  'puppetserver'            => 'G0BfSGbPoc9eqAmToDhnv8et5ag=',
-  'puppetboard'             => '2bDFb5JXgC6_l3dqHxv64HOZRm0=',
-  'puppetexplorer'          => 'hCiz0KejqgjngwrOoNoi3QrNeEM=',
-  'puppet-inventory'        => '-qatAsCRU2aPh2vXrudqj0g6Brs=',
-  'r10k'                    => 'SZFceeWZ6Etn83fv_6T8u_lkL8Y='
-}.freeze
-
 RuboCop::RakeTask.new
 
 task :docker do
@@ -121,24 +104,12 @@ IMAGES.each do |image|
     desc 'Publish docker image'
     task publish: %i[
       push
-      update_microbadger
-      manifesto
     ]
 
     task test: %i[
       lint
       spec
     ]
-
-    task :manifesto do
-      raise 'This task require manifesto to be installed' unless find_executable 'manifesto'
-      name = SecureRandom.hex
-      sh "docker run --name #{name} --rm -d --entrypoint '' #{REPOSITORY}/#{image} /bin/sh -c 'while true; do echo hello world; sleep 1; done'"
-      sh "docker run --rm  -v /var/run/docker.sock:/var/run/docker.sock puppet/lumogon scan #{name} > /tmp/#{name}.json"
-      sh "docker kill #{name}"
-      sh "manifesto put #{REPOSITORY}/#{image} lumogon /tmp/#{name}.json"
-      sh "rm /tmp/#{name}.json"
-    end
 
     desc 'Update Dockerfile label content for new version'
     task :rev do
@@ -155,22 +126,6 @@ IMAGES.each do |image|
       end
       File.open(file_name, 'w') { |file| file.puts text }
     end
-
-    task :update_microbadger do
-      if MICROBADGER_TOKENS.key? image
-        address = "https://hooks.microbadger.com/images/#{REPOSITORY}/#{image}/#{MICROBADGER_TOKENS[image]}"
-        puts address
-        uri = URI.parse(address)
-        response = Net::HTTP.post_form(uri, {})
-        if response.code == '200'
-          info "microbadger.com updating badges for #{image}"
-        else
-          warn "issue updating microbadger.com badges for #{image}"
-        end
-      else
-        warn "missing microbadger.com webhook URL for #{image}"
-      end
-    end
   end
 end
 
@@ -181,12 +136,12 @@ task :update_base_images do
   end
 end
 
-%i[test lint publish rev pull update_microbadger].each do |task_name|
+%i[test lint publish rev pull].each do |task_name|
   desc "Run #{task_name} for all images in repository in parallel"
   multitask task_name => IMAGES.collect { |image| "#{image}:#{task_name}" }
 end
 
-%i[spec build manifesto].each do |task_name|
+%i[spec build].each do |task_name|
   desc "Run #{task_name} for all images in repository"
   task task_name => IMAGES.collect { |image| "#{image}:#{task_name}" }
 end

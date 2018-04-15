@@ -1,6 +1,3 @@
-[![Build
-Status](https://travis-ci.org/puppetlabs/puppet-in-docker.svg?branch=master)](https://travis-ci.org/puppetlabs/puppet-in-docker)
-
 # Puppet-in-Docker
 
 A series of Dockerfiles, and the associated build toolchain, for building Docker images containing Puppet and related software.
@@ -15,22 +12,22 @@ You can copy the individual Dockerfiles in this repo and use them locally for yo
 
 If you do find yourself customizing these images, please open issues describing why and whether your use is something that could be handled in these images.
 
-You can find published versions of these images on [Docker Hub](https://hub.docker.com/u/puppet):
+You can find published versions of these images on [quay.io](https://quay.io/user/bootc):
 
-* [![](https://images.microbadger.com/badges/image/puppet/puppet-agent-ubuntu.svg)](http://microbadger.com/images/puppet/puppet-agent-ubuntu) [![](https://images.microbadger.com/badges/version/puppet/puppet-agent-ubuntu.svg)](http://microbadger.com/images/puppet/puppet-agent-ubuntu) [puppet/puppet-agent-ubuntu](https://hub.docker.com/r/puppet/puppet-agent-ubuntu/)
-* [![](https://images.microbadger.com/badges/image/puppet/puppetserver-standalone.svg)](http://microbadger.com/images/puppet/puppetserver-standalone) [![](https://images.microbadger.com/badges/version/puppet/puppetserver-standalone.svg)](http://microbadger.com/images/puppet/puppetserver-standalone) [puppet/puppetserver-standalone](https://hub.docker.com/r/puppet/puppetserver-standalone/)
-* [![](https://images.microbadger.com/badges/image/puppet/facter.svg)](http://microbadger.com/images/puppet/facter) [![](https://images.microbadger.com/badges/version/puppet/facter.svg)](http://microbadger.com/images/puppet/facter) [puppet/facter](https://hub.docker.com/r/puppet/facter/)
-* [![](https://images.microbadger.com/badges/image/puppet/puppetserver.svg)](http://microbadger.com/images/puppet/puppetserver) [![](https://images.microbadger.com/badges/version/puppet/puppetserver.svg)](http://microbadger.com/images/puppet/puppetserver) [puppet/puppetserver](https://hub.docker.com/r/puppet/puppetserver/)
-* [![](https://images.microbadger.com/badges/image/puppet/puppet-agent-alpine.svg)](http://microbadger.com/images/puppet/puppet-agent-alpine) [![](https://images.microbadger.com/badges/version/puppet/puppet-agent-alpine.svg)](http://microbadger.com/images/puppet/puppet-agent-alpine) [puppet/puppet-agent-alpine](https://hub.docker.com/r/puppet/puppet-agent-alpine/)
-* [![](https://images.microbadger.com/badges/image/puppet/puppetexplorer.svg)](http://microbadger.com/images/puppet/puppetexplorer) [![](https://images.microbadger.com/badges/version/puppet/puppetexplorer.svg)](http://microbadger.com/images/puppet/puppetexplorer) [puppet/puppetexplorer](https://hub.docker.com/r/puppet/puppetexplorer/)
-* [![](https://images.microbadger.com/badges/image/puppet/puppetdb-postgres.svg)](http://microbadger.com/images/puppet/puppetdb-postgres) [![](https://images.microbadger.com/badges/version/puppet/puppetdb-postgres.svg)](http://microbadger.com/images/puppet/puppetdb-postgres) [puppet/puppetdb-postgres](https://hub.docker.com/r/puppet/puppetdb-postgres/)
-* [![](https://images.microbadger.com/badges/image/puppet/puppetboard.svg)](http://microbadger.com/images/puppet/puppetboard) [![](https://images.microbadger.com/badges/version/puppet/puppetboard.svg)](http://microbadger.com/images/puppet/puppetboard) [puppet/puppetboard](https://hub.docker.com/r/puppet/puppetboard/)
-* [![](https://images.microbadger.com/badges/image/puppet/puppetdb.svg)](http://microbadger.com/images/puppet/puppetdb) [![](https://images.microbadger.com/badges/version/puppet/puppetdb.svg)](http://microbadger.com/images/puppet/puppetdb) [puppet/puppetdb](https://hub.docker.com/r/puppet/puppetdb/)
-* [![](https://images.microbadger.com/badges/image/puppet/puppet-agent-centos.svg)](http://microbadger.com/images/puppet/puppet-agent-centos) [![](https://images.microbadger.com/badges/version/puppet/puppet-agent-centos.svg)](http://microbadger.com/images/puppet/puppet-agent-centos) [puppet/puppet-agent-centos](https://hub.docker.com/r/puppet/puppet-agent-centos/)
-* [![](https://images.microbadger.com/badges/image/puppet/puppet-agent-debian.svg)](http://microbadger.com/images/puppet/puppet-agent-debian) [![](https://images.microbadger.com/badges/version/puppet/puppet-agent-debian.svg)](http://microbadger.com/images/puppet/puppet-agent-debian) [puppet/puppet-agent-debian](https://hub.docker.com/r/puppet/puppet-agent-debian/)
-* [![](https://images.microbadger.com/badges/image/puppet/puppet-inventory.svg)](http://microbadger.com/images/puppet/puppet-inventory) [![](https://images.microbadger.com/badges/version/puppet/puppet-inventory.svg)](http://microbadger.com/images/puppet/puppet-inventory) [puppet/puppet-inventory](https://hub.docker.com/r/puppet/puppet-inventory/)
-* [![](https://images.microbadger.com/badges/image/puppet/r10k.svg)](http://microbadger.com/images/puppet/r10k) [![](https://images.microbadger.com/badges/version/puppet/r10k.svg)](http://microbadger.com/images/puppet/r10k) [puppet/r10k](https://hub.docker.com/r/puppet/r10k/)
-
+* [![Docker Repository on Quay](https://quay.io/repository/bootc/facter/status "Docker Repository on Quay")](https://quay.io/repository/bootc/facter): `quay.io/bootc/facter`
+* [![Docker Repository on Quay](https://quay.io/repository/bootc/puppet-agent/status "Docker Repository on Quay")](https://quay.io/repository/bootc/puppet-agent): `quay.io/bootc/puppet-agent`
+* [![Docker Repository on Quay](https://quay.io/repository/bootc/puppet-agent-alpine/status "Docker Repository on Quay")](https://quay.io/repository/bootc/puppet-agent-alpine): `quay.io/bootc/puppet-agent-alpine`
+* [![Docker Repository on Quay](https://quay.io/repository/bootc/puppet-agent-centos/status "Docker Repository on Quay")](https://quay.io/repository/bootc/puppet-agent-centos): `quay.io/bootc/puppet-agent-centos`
+* [![Docker Repository on Quay](https://quay.io/repository/bootc/puppet-agent-debian/status "Docker Repository on Quay")](https://quay.io/repository/bootc/puppet-agent-debian): `quay.io/bootc/puppet-agent-debian`
+* [![Docker Repository on Quay](https://quay.io/repository/bootc/puppet-agent-ubuntu/status "Docker Repository on Quay")](https://quay.io/repository/bootc/puppet-agent-ubuntu): `quay.io/bootc/puppet-agent-ubuntu`
+* [![Docker Repository on Quay](https://quay.io/repository/bootc/puppet-inventory/status "Docker Repository on Quay")](https://quay.io/repository/bootc/puppet-inventory): `quay.io/bootc/puppet-inventory`
+* [![Docker Repository on Quay](https://quay.io/repository/bootc/puppetboard/status "Docker Repository on Quay")](https://quay.io/repository/bootc/puppetboard): `quay.io/bootc/puppetboard`
+* [![Docker Repository on Quay](https://quay.io/repository/bootc/puppetdb/status "Docker Repository on Quay")](https://quay.io/repository/bootc/puppetdb): `quay.io/bootc/puppetdb`
+* [![Docker Repository on Quay](https://quay.io/repository/bootc/puppetdb-postgres/status "Docker Repository on Quay")](https://quay.io/repository/bootc/puppetdb-postgres): `quay.io/bootc/puppetdb-postgres`
+* [![Docker Repository on Quay](https://quay.io/repository/bootc/puppetexplorer/status "Docker Repository on Quay")](https://quay.io/repository/bootc/puppetexplorer): `quay.io/bootc/puppetexplorer`
+* [![Docker Repository on Quay](https://quay.io/repository/bootc/puppetserver/status "Docker Repository on Quay")](https://quay.io/repository/bootc/puppetserver): `quay.io/bootc/puppetserver`
+* [![Docker Repository on Quay](https://quay.io/repository/bootc/puppetserver-standalone/status "Docker Repository on Quay")](https://quay.io/repository/bootc/puppetserver-standalone): `quay.io/bootc/puppetserver-standalone`
+* [![Docker Repository on Quay](https://quay.io/repository/bootc/r10k/status "Docker Repository on Quay")](https://quay.io/repository/bootc/r10k): `quay.io/bootc/r10k`
 
 ## Image usage
 
