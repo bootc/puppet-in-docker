@@ -1,6 +1,6 @@
 FROM ubuntu:16.04
 
-ENV PUPPET_AGENT_VERSION="5.5.0" UBUNTU_CODENAME="xenial"
+ENV PUPPET_AGENT_VERSION="5.5.1" UBUNTU_CODENAME="xenial"
 
 LABEL org.label-schema.vendor="Chris Boot" \
       org.label-schema.url="https://github.com/bootc/puppet-in-docker" \

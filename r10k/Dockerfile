@@ -1,4 +1,4 @@
-FROM quay.io/bootc/puppet-agent-ubuntu:5.5.0
+FROM quay.io/bootc/puppet-agent-ubuntu:5.5.1
 
 ENV R10K_VERSION="2.6.2"
 
