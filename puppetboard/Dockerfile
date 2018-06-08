@@ -1,7 +1,7 @@
 FROM alpine:3.7
 
 ENV PUPPET_BOARD_VERSION="0.3.0" \
-    GUNICORN_VERSION="19.7.1" \
+    GUNICORN_VERSION="19.8.1" \
     PUPPETBOARD_SETTINGS="docker_settings.py"
 
 LABEL org.label-schema.vendor="Chris Boot" \

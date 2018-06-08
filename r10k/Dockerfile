@@ -1,6 +1,6 @@
-FROM quay.io/bootc/puppet-agent-ubuntu:5.5.1
+FROM quay.io/bootc/puppet-agent-ubuntu:5.5.2
 
-ENV R10K_VERSION="2.6.2"
+ENV R10K_VERSION="2.6.3"
 
 LABEL org.label-schema.vendor="Chris Boot" \
       org.label-schema.url="https://github.com/bootc/puppet-in-docker" \

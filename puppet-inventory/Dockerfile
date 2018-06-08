@@ -1,4 +1,4 @@
-FROM quay.io/bootc/puppet-agent-ubuntu:5.5.1
+FROM quay.io/bootc/puppet-agent-ubuntu:5.5.2
 
 ENV PUPPET_INVENTORY_VERSION="0.4.0"
 
